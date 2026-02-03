@@ -1,0 +1,40 @@
+{
+    "name": "heygeeks/secure-file-transfer",
+    "description": "A Laravel package enabling secure, authenticated, auditable file transfer between two servers with strong security controls, replay protection, signed URLs, and enterprise-grade logging.",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "HeyGeeks",
+            "email": "dev@heygeeks.io"
+        }
+    ],
+    "require": {
+        "php": "^8.1",
+        "laravel/framework": "^10.0|^11.0",
+        "symfony/http-client": "^6.0|^7.0",
+        "firebase/php-jwt": "^6.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^10.0",
+        "laravel/pint": "^1.0",
+        "phpstan/phpstan": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "HeyGeeks\\SecureFileTransfer\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "HeyGeeks\\SecureFileTransfer\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "HeyGeeks\\SecureFileTransfer\\Providers\\SecureTransferServiceProvider"
+            ]
+        }
+    }
+}
